@@ -1,0 +1,156 @@
+/* Remove margin and padding from the body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Apply background directly to the body, ensuring it fully covers the screen */
+body {
+    font-family: Arial, sans-serif;
+    background: url('../../../assets/images/sign\ in\ \(1\).jpeg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;/* Ensure no scrollbars appear */
+}
+
+/* Add animation to the container */
+.signup-container {
+    /* background: linear-gradient(to bottom, rgba(242, 17, 17, 0.3), rgba(255, 255, 255, 0.1)); */
+    background: linear-gradient(to bottom, rgba(3, 176, 245, 0.7), rgba(223, 231, 234, 0.5));
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    height: 400px;
+    animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation */
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+}
+
+.signup-container:hover {
+    transform: scale(1); /* Add scale-up effect on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+    font-size: 20px;
+}
+
+label:hover {
+    color: rgb(9, 43, 114);
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 25px;
+    transition: all 0.3s ease;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 14px;
+    font-style: bold;
+    color: #0c4a81;
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:hover {
+    border: 2px solid #3213fc;
+    background-color: #f0f8ff;
+}
+
+button {
+    width: 100px;  /* Set button width */
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 10px auto 0 auto;  /* Center button */
+    display: block;  /* Display block to use auto margin */
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+button:hover {
+    background-color: #065d86;
+    border-radius: 50px;
+    color: whitesmoke;
+}
+
+/* Add button animation on hover */
+button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+
+/* Flight animation */
+.flight {
+    position: absolute;
+    width: 400px; /* Make the image bigger */
+    height: auto;
+    top: 20%; /* Adjust starting point */
+    left: -150px; /* Start off-screen */
+    animation: fly-across 10s linear infinite; /* Flight animation */
+}
+
+@keyframes fly-across {
+    0% {
+        left: -150px; /* Start off-screen */
+        top: 20%; /* Starting height */
+    }
+    50% {
+        top: 10%; /* Mid-flight height change */
+    }
+    100% {
+        left: 100vw; /* End off-screen on the right */
+        top: 30%; /* End at a lower height */
+    }
+}
+.social-signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .social-signin .btn {
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+  }
+  
+
+  

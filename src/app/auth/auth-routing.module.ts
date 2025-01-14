@@ -3,14 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignInComponent } from './sign-in/sign-in.component';
 
 const routes: Routes = [
-  {
-    path:'signin',
-    component:SignInComponent
-  }
+  { path: 'signin', component: SignInComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  
 })
 export class AuthRoutingModule { }

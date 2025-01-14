@@ -1,1 +1,106 @@
-<p>header works!</p>
+<div class="header-wrapper">
+    <div class="head">
+        <img src="../../../assets/images/logo-t.png" alt="Logo">
+        <p> <a routerLink="/photo360/degreephoto">360° photos</a></p>
+        <p> <a routerLink="/video/videodegree">360° video</a></p>
+        <p> <a routerLink="/gallery/photogallery">Photogallery</a></p>
+    </div>
+    <div>
+        <a routerLink="/home/contactUs" class="contact-icon">
+            <img src="../../../assets/images/phone.png" alt="Contact Icon" />
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Carousel with Header and Search Bar -->
+    <!-- Carousel with Header and Search Bar -->
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <!-- Video Carousel Item as Active -->
+        <div class="carousel-item active">
+            <video class="img" controls>
+                <source src="../../../assets/videos/5243307-hd_1280_720_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Indifolio</h1>
+                <h2>Experience Our Virtual Tours</h2>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="../../../assets/images/Karnataka Tourism  (1).jpeg" class="img" alt="Karnataka">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Indifolio</h1>
+                <h2>Explore the World Virtually</h2>
+                <form class="search-form">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../../../assets/images/kerala.jpeg" class="img" alt="Kerala">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Indifolio</h1>
+                <h2>Explore the World Virtually</h2>
+                <form class="search-form">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../../../assets/images/mumbai.jpeg" class="img" alt="Mumbai">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Indifolio</h1>
+                <h2>Explore the World Virtually</h2>
+                <form class="search-form">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+    <section class="tour-features">
+        <h2>Featured Destinations</h2>
+        <div class="destinations">
+            <div class="destination-card" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)">
+                <img src="../../../assets/images/Gadisar lake.jpeg" routerLink="/photo360/degreephoto" alt="Gadisar lake">
+
+                <div class="destination-info">
+                    <h3>360° Photos</h3>
+                    <p>Rajasthan</p>
+                </div>
+            </div>
+            <div class="destination-card" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)">
+                <img src="../../../assets/images/Incredible India 🇮🇳!_Gue Village, Spiti, Himachal Pradesh_.jpeg" routerLink="/video/videodegree" alt="Gue Village, Spiti">
+
+                <div class="destination-info">
+                    <h3>360° Video</h3>
+                    <p>Himachal Pradesh</p>
+                </div>
+            </div>
+            <div class="destination-card" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)">
+                <img src="../../../assets/images/Love ❤️.jpeg" routerLink="/gallery/photogallery" alt="Taj Mahal">
+                <div class="destination-info">
+                    <h3>Photogallery</h3>
+                    <p>Explore the majestic Taj Mahal in 360°</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

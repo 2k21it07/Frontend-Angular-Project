@@ -1,0 +1,138 @@
+/* Wrapper for the entire sign-in page */
+.sign-in-wrapper {
+    background-image: url(../../assets/images/bgtrip.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInPage 2s ease-in-out; /* Page fade-in animation */
+    opacity: 0; /* Start invisible */
+    animation: fadeInPage 2s ease-in forwards; /* Fade in animation */
+}
+
+/* Container for the sign-in content */
+.sign-in-container {
+    background-color: rgba(39, 83, 136, 0.85); /* More opaque background */
+    padding: 50px;
+    border-radius: 15px;
+    max-width: 600px;
+    text-align: center;
+    position: relative; /* To position the logo */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    animation: slideUp 1.2s ease-in-out forwards;
+    margin-top: -50px;
+    height: auto; /* Adjusts height automatically */
+}
+
+/* Logo positioning - partially outside the container */
+.logo-wrapper {
+    position: absolute;
+    top: -60px; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+    border: 5px solid white; 
+    animation: logoBounce 2s infinite; /* Attractive logo bounce animation */
+}
+
+/* Text styling */
+.header-title {
+    font-size: 38px;
+    margin-top: 30px; /* Adds space below the logo */
+    margin-bottom: 10px;
+    color: white;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: fadeInText 1.5s ease-in forwards 0.5s; /* Fade-in with slight delay */
+}
+
+.header-subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeInText 1.5s ease-in forwards 0.7s; /* Subtitle delayed fade-in */
+}
+
+/* Button styling */
+button {
+    background-color: lightblue;
+    color: black;
+    padding: 15px 35px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInText 1.5s ease-in forwards 1s; /* Button delayed fade-in */
+}
+
+button:hover {
+    background-color: #ff7b54; /* More vibrant hover effect */
+    color: white;
+    transform: translateY(-8px); /* Lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Button shadow on hover */
+}
+
+/* Text Hover Effects */
+.header-title:hover, .header-subtitle:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    color:rgba(11, 214, 225, 0.873); /* Text color change on hover */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Additional Hover Effects for the Container */
+.sign-in-container:hover {
+    transform: scale(1.03); /* Slight zoom effect on container hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Animations */
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes logoBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

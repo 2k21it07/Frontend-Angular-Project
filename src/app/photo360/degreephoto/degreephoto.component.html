@@ -1,0 +1,17 @@
+<h1> 360° Photo </h1>
+<div class="photo-gallery">
+ 
+    <div class="photo-item" *ngFor="let place of places">
+     
+      <a [href]="place.link" target="_blank" class="photo-link">
+        <img [src]="place.image" [alt]="place.name" class="photo-image">
+        <div class="photo-info">
+          <h3>{{ place.name }}</h3>
+          
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+  

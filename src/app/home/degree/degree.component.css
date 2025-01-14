@@ -1,0 +1,19 @@
+/* Mobile Support */
+@media (max-width: 768px) {
+    .destinations {
+      flex-direction: column;
+    }
+  
+    .destination-card {
+      width: 100%;
+    }
+  
+    .explore-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  
+    .header h1 {
+      font-size: 2rem;
+    }
+  }

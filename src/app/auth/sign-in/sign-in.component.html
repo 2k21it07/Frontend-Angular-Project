@@ -1,24 +1,21 @@
-<!-- <p>sign-in works!</p>
-<button routerLink="/home/header">home</button> -->
-<div class="form-wrapper">
-    <div class="form-container">
-      <h2>Sign In</h2>
-    
-      
+<body>
+
+
+
+  <div class="signup-container">
+      <h2><b>Sign In</b></h2>
       <form (ngSubmit)="signin()">
-        <div>
-          <label for="username">Userame:</label>
-          <input type="text" id="username" [(ngModel)]="username" name="username" placeholder="Username">
-        </div>
-  
-        <div>
-          <label for="password">Password:</label>
-          <input type="password" id="password" [(ngModel)]="password"name="password" placeholder="Password">
-        </div>
-  
-        <button type="submit">Sign In</button>
-        
+          <div class="input-group">
+              <label for="username"><b>Username :)</b></label>
+              <input type="text" id="username" [(ngModel)]="username" name="username" placeholder="Username">
+          </div>
+          <div class="input-group">
+              <label for="password"><b>Password :)</b></label>
+              <input type="password" id="password" [(ngModel)]="password" name="password" placeholder="Password">
+          </div>
+          <button routerLink="/home/home" class="btn"><b>Sign in</b></button>
       </form>
-    </div>
   </div>
-  
+  <img src="../../../assets/images/flight.png" alt="Flying" class="flight" [@flyInOut] />
+ 
+</body>
